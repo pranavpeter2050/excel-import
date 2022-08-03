@@ -9,8 +9,8 @@
                             {{success}}
                         </div>
                         <form @submit="formSubmit" enctype="multipart/form-data">
-                            <input type="file" class="form-control" v-on:change="onChange">
-                            <button class="btn btn-primary btn-block">Upload</button>
+                            <input type="file" class="input-field" v-on:change="onChange" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                            <button class="submitt-bttn">Upload</button>
                         </form>
                     </div>
                 </div>
