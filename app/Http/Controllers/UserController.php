@@ -22,7 +22,11 @@ class UserController extends Controller
     public function fileImport(Request $request)
     {
         Excel::import(new UsersImport, $request->file('file')->store('temp'));
-        return back();
+        $response = [
+            "success" => 1,
+            "message" => "Moved to DB"
+        ];
+        return response()->json($response, 200);
     }
     /**
     * @return \Illuminate\Support\Collection
